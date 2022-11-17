@@ -1,6 +1,5 @@
 package com.baseclass;
 
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -18,7 +17,7 @@ public class BaseMethods_eg {
 		if(type.equalsIgnoreCase("Chrome")) {
 			
 			System.setProperty("webdriver.chrome.driver",
-					"C:\\Users\\91637\\eclipse-workspace\\Maven_Project_7Am\\New Chrome\\chromedriver.exe" );
+					"C:\\Users\\91637\\eclipse-workspace\\MyStore\\ChromeDriver\\chromedriver.exe" );
 			
 				driver = new ChromeDriver();
 		}
@@ -50,32 +49,6 @@ public class BaseMethods_eg {
 		
 		
 	}
-public static String getWindowId() {
-		
-		String mainwindow = driver.getWindowHandle();
-		return mainwindow;
-		
-	}
-public static Set<String> getAllWindowID(){
-	
-	Set<String> allwindows = driver.getWindowHandles();
-	return allwindows;
-		
-}
-
-public static void windowSwitch(String subwindow) {
-	
-	driver.switchTo().window(subwindow);
-	
-}
-
-public static String elementText(WebElement element) {
-	
-	String text = element.getText();
-	
-	return text;
-		
-}
 	}
 
 
